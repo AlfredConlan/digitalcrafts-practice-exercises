@@ -1,0 +1,387 @@
+<body>
+  <!-- 
+Create a form 1.
+Create a form that includes a input element and can except text from a user.
+
+Must be able to include text in the input field
+Must use at least one fieldset element
+Must Contain Labels 
+-->
+
+  <form>
+    <fieldset>
+      <p>
+        <label for="city">
+          What city are you in?
+          <input type="text" name="city" id="city" />
+        </label>
+      </p>
+      <p>
+        <label for="state">
+          What state are you in?
+          <input type="text" name="state" id="state" />
+        </label>
+      </p>
+    </fieldset>
+  </form>
+
+  <!-- 
+Create a form 2.
+Create a form that includes a input element that gives a user to select only one of many options.
+
+Only one selection should be able to be selected at a time.
+Must use at least one fieldset element
+Must contain labels
+ -->
+
+  <form>
+    <fieldset>
+      <legend>How many years experience do you have?</legend>
+      <p>
+        <label>
+          <input type="radio" id="1" name="question" value="1" checked /> 1
+        </label>
+        <label>
+          <input type="radio" id="2" name="question" value="2" /> 2
+        </label>
+        <label>
+          <input type="radio" id="3" name="question" value="3" /> 3
+        </label>
+        <label>
+          <input type="radio" id="4+" name="question" value="4+" /> 4+
+        </label>
+      </p>
+    </fieldset>
+  </form>
+
+  <!-- 
+Create a form 3.
+Create a form that includes a input element that gives a user a dropdown to select only one of many options.
+
+Only one selection should be able to be selected at a time.
+Must use at least one fieldset element
+Must contain labels
+ -->
+
+  <form>
+    <fieldset>
+      <p>
+        <label for="profession-select"> What is your profession? </label>
+        <select name="profession" id="profession-select">
+          <option value="" disabled selected>
+            --Please choose an option--
+          </option>
+          <option value="developer">Developer</option>
+          <option value="tester">Tester</option>
+          <option value="tech-support">Tech Support Specialist</option>
+          <option value="manager">Manager</option>
+        </select>
+      </p>
+    </fieldset>
+  </form>
+
+  <!-- 
+Order a Pizza.
+Create a form that allows a user to order a pizza.
+
+Should have have input fields for:
+Types of Crust
+Toppings
+Whether it's delivery or pick up
+Address
+Name for order
+Additional Instructions
+Must use at least one fieldset element
+Must contain labels
+ -->
+
+  <form>
+    <fieldset>
+      <legend>Place Your Pizza Order Here</legend>
+      <fieldset>
+        <p>What type of crust would you like?</p>
+        <p>
+          <label>
+            <input type="radio" id="regular" name="crust" value="regular" checked /> Regular
+          </label>
+          <label>
+            <input type="radio" id="deep" name="crust" value="deep" /> Deep Dish
+          </label>
+          <label>
+            <input type="radio" id="parm" name="crust" value="parm" /> Parmesan
+          </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <p>
+          What toppings would you like? (Choose One or More)
+        </p>
+        <p>
+          <label> <input type="checkbox" checked /> Pepperoni </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Black Olives </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Jalepenos </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Pineapple </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <p>Will this be for Delivery or Pick Up?</p>
+        <p>
+          <label>
+            <input type="radio" id="delivery" name="crust" value="delivery" checked /> Delivery
+          </label>
+          <label>
+            <input type="radio" id="pick-up" name="crust" value="pick-up" /> Pick Up
+          </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <p>
+        <p>Please enter your address</p>
+        <label for="Street Address">
+          Street
+          <input type="text" name="street" id="street" />
+        </label>
+        </p>
+        <p>
+          <label for="city">
+            City
+            <input type="text" name="city" id="city" />
+          </label>
+        </p>
+        <p>
+          <label for="state">
+            State
+            <input type="text" name="state" id="state" />
+          </label>
+        </p>
+        <p>
+          <label for="zip code">
+            Zip Code
+            <input type="text" name="zip" id="zip" />
+          </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <p>What is the name on the order?</p>
+        <p>
+          <label for="name">
+            <input type="text" name="name" id="name" />
+          </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <p>Please allow 30 minutes for delivery. Thank you!</p>
+
+      </fieldset>
+    </fieldset>
+  </form>
+
+  <!--   
+Credit Card Payment
+Create a form that allows a user to enter information to make a credit card purchase.
+
+Search the internet for examples.
+Should at least contain fields for: (use the correct types for 'input' fields to ensure proper data is entered)
+Name
+Email
+Card number
+Expiration date
+Security code
+Must use fieldset elements
+Must contain labels
+ -->
+
+  <form>
+    <fieldset>
+      <legend>Please Enter Your Payment Information</legend>
+      <div class="form-group name">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <div class="form-group email">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email">
+      </div>
+      <div class="form-group" id="card-number-field">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" class="form-control" id="cardNumber">
+      </div>
+      <div class="form-group security-code">
+        <label for="security-code">Security Code</label>
+        <input type="text" class="form-control" id="security-code">
+      </div>
+      <div class="form-group" id="expiration-date">
+        <label>Expiration Date</label>
+        <select>
+          <option value="01">January</option>
+          <option value="02">February </option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <select>
+          <option value="16"> 2016</option>
+          <option value="17"> 2017</option>
+          <option value="18"> 2018</option>
+          <option value="19"> 2019</option>
+          <option value="20"> 2020</option>
+          <option value="21"> 2021</option>
+        </select>
+      </div>
+      <div class="form-group" id="credit_cards">
+        <img src="./images/visa.jpg" id="visa">
+        <img src="./images/mastercard.jpg" id="mastercard">
+        <img src="./images/amex.jpg" id="amex">
+      </div>
+      <div class="form-group" id="pay-now">
+        <button type="submit" class="btn btn-default" id="confirm-purchase">Confirm</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <!--   
+User Sign up and login
+In this exercise you'll create 2 forms.
+
+The first form will be for a user sign up. You will ask for information from the user to sign-up to your website.
+
+This form should collect information from the user such as :
+  name
+  password
+  email
+  telephone
+  Tell me about yourself.
+  Where did you hear about us.
+
+Should be styled and centered on the screen.
+
+Must use fieldset elements
+Must contain labels
+
+
+The second form should be a form that is contained within the navbar and displayed on the top-right of the screen.
+
+This form should only have 2 fields and a button to login:
+  email
+  password
+
+Should be position in the navbar section (top of the screen)
+
+Must contain labels
+ -->
+
+
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .topnav-right {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <div class="topnav-right">
+      <form>
+        <label for="email">
+          Email
+          <input type="text" name="email" id="email" />
+        </label>
+      <a href="#login">Log in</a>
+      </form>
+    </div>
+  </div>
+
+<div style="display: block; text-align: center">
+  <form style="display: inline-block; margin-left: auto; margin-right: auto; text-align: left;">
+    <fieldset>
+      <p>
+      <p style="text-align: center;">Please Enter Your Sign Up Information</p>
+      <label for="name">
+        Name
+        <input type="text" name="name" id="name" />
+      </label>
+      </p>
+      <p>
+        <label for="email">
+          Email
+          <input type="text" name="city" id="city" />
+        </label>
+      </p>
+      <p>
+        <label for="password">
+          Password
+          <input type="password" name="state" id="state" />
+        </label>
+      </p>
+      <p>
+        <label for="phone number">
+          Phone Number
+          <input type="text" name="phone" id="phone" />
+        </label>
+      </p>
+      <p>
+        <label for="About Yourself">
+          Tell me about yourself
+          <input type="textarea" name="about" id="about" />
+        </label>
+      </p>
+      <p>
+        <label for="How did you hear about us">
+          How did you hear about us?
+          <input type="text" name="how" id="how" />
+        </label>
+      </p>
+    </fieldset>
+  </form>
+</div>
+
+
+
+</body>

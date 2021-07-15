@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        /* FlexBox Layout */
+        .flexkey {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        /* Grid Layout */
+        .gridkey {
+            display: grid;
+            grid-template-columns: 78px 78px 78px 78px;
+            grid-template-rows: 105px 50px 50px 50px 50px 50px;
+            grid-gap: 2px;
+        }
+
+        .gridkey>div {
+            color: white;
+            background: black;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .calc-body {
+            width: 320px;
+            background-color: #2b2d2f;
+        }
+
+        .body-color {
+            background-color: #2b2d2f !important;
+        }
+
+        .display-section {
+            font-size: 38px;
+            font-weight: 600;
+            margin-top: 35px;
+            margin-left: -50px
+        }
+
+        .key-color {
+            background: black;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .light-gray {
+            background-color: #2b2d2f;
+        }
+
+        .key {
+            color: white;
+            width: 38.5px;
+            height: 10.5px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .black-border {
+            border: #2b2d2f;
+            border-width: .25px;
+            border-style: solid;
+        }
+
+        .display-screen {
+            text-align: right;
+            width: 320px;
+            height: 105px;
+            background-color: #2b2d2f;
+            color: white;
+        }
+
+        .read-out {
+            padding-top: 48px;
+            padding-right: 4px;
+            font-size: 36px;
+            font-weight: 600;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FlexBox Example -->
+    <div class="flexkey ">
+        <div class="key-color black-border display-screen">
+            <div class="read-out">
+                314.29
+            </div>
+        </div>
+    </div>
+    <div class="flexkey ">
+        <div class="key-color black-border key">
+            %
+        </div>
+        <div class="key-color black-border key">
+            CE
+        </div>
+        <div class="key-color black-border key">
+            C
+        </div>
+        <div class="key-color black-border key">
+            &#9003;
+        </div>
+    </div>
+    <div class="flexkey ">
+        <div class="key-color black-border key">
+            1/x
+        </div>
+        <div class="key-color black-border key">
+            x2
+        </div>
+        <div class="key-color black-border key">
+            2&#10188;x
+        </div>
+        <div class="key-color black-border key">
+            &divide;
+        </div>
+    </div>
+    <div class="flexkey ">
+        <div class="key-color black-border key">
+            7
+        </div>
+        <div class="key-color black-border key">
+            8
+        </div>
+        <div class="key-color black-border key">
+            9
+        </div>
+        <div class="key-color black-border key">
+            &times;
+        </div>
+    </div>
+    <div class="flexkey ">
+        <div class="key-color black-border key">
+            4
+        </div>
+        <div class="key-color black-border key">
+            5
+        </div>
+        <div class="key-color black-border key">
+            6
+        </div>
+        <div class="key-color black-border key">
+            -
+        </div>
+    </div>
+    <div class="flexkey ">
+        <div class="key-color black-border key">
+            1
+        </div>
+        <div class="key-color black-border key">
+            2
+        </div>
+        <div class="key-color black-border key">
+            3
+        </div>
+        <div class="key-color black-border key">
+            +
+        </div>
+    </div>
+    <div class="flexkey ">
+        <div class="key-color black-border key">
+            +/-
+        </div>
+        <div class="key-color black-border key">
+            0
+        </div>
+        <div class="key-color black-border key">
+            .
+        </div>
+        <div class="key-color black-border key" style="background-color: #1167b1 ;">
+            =
+        </div>
+    </div>
+    <br>
+    <!-- Grid Example -->
+    <div class="gridkey calc-body">
+        <div class="body-color"></div>
+        <div class="body-color"></div>
+        <div class="body-color"></div>
+        <div class="body-color display-section">314.29
+        </div>
+        <div>%</div>
+        <div>CE</div>
+        <div>C</div>
+        <div>&#9003;</div>
+        <div>1/x</div>
+        <div>x2</div>
+        <div>2&#10188;x</div>
+        <div>&divide;</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>&times;</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>-</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>+</div>
+        <div>+/-</div>
+        <div>0</div>
+        <div>.</div>
+        <div style="background-color: #1167b1 ;">=</div>
+    </div>
+</body>
+
+</html>
