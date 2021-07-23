@@ -2,7 +2,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .main {
-  height: 100vh;
+  height: 100%;
   background-color: #f3f2ef;
 }
 
@@ -17,6 +17,11 @@ body {
   margin: auto;
   width: 70%;
   border-radius: 50px;
+}
+
+.section-row {
+  padding-top: 20px;
+  min-width: 450px;
 }
 
 #name {
