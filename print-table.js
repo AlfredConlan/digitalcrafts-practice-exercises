@@ -16,15 +16,19 @@
 // 			3 x 9 = 27
 // 			3 x 10 = 30
 
-const printTable = (n) => {
+// Modify the above function to accept 2 parameters like "printTable(n,m)"
+//where 'n' is the number for which the table is printed,
+// and 'm' is the number up to which the table needs to be printed.
+
+const printTable = (n, m) => {
   // keep track of solution
   let solution = 1;
 
   // loop through and print each solution
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= m; i++) {
     solution = i * n;
     console.log(n + " x " + i + " = " + solution);
   }
 };
 
-printTable(2);
+printTable(2, 15);
