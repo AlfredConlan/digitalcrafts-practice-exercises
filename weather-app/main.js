@@ -75,7 +75,7 @@ function displayCurrent(currentData) {
 
   // console.log(parsedCurrent);
 
-  // Reset all fields - Find better way?
+  // Reset all fields
   currentDiv.innerHTML = "";
 
   // Create card
@@ -137,12 +137,15 @@ function displayCurrent(currentData) {
 
   // Show humidity
   humidityTag.id = "humidity";
-  humidityTag.innerText = "Humidity: " + parsedCurrent.properties.windDirection.value + "%";
+  humidityTag.innerText = "Humidity: " + Math.round(parsedCurrent.properties.relativeHumidity.value) + "%";
 
   // Show dew point
   dewPointTag.id = "dew";
   tempFahr = convertCelsiusToFahr(parsedCurrent.properties.dewpoint.value);
   dewPointTag.innerText = "Dew Point: " + tempFahr;
+
+  // Style currentDiv
+  currentDiv.className = "container";
 
   // Append info
   currentDiv.appendChild(cardBody);
@@ -166,11 +169,11 @@ function displayForeCast(foreCastData, locationData) {
   const parsedLocationData = JSON.parse(locationData);
   const locationDiv = document.getElementById("locationDiv");
   const locationTag = document.createElement("h2");
-  const gridDiv = document.getElementById("foreCastDiv");
+  const forCastDiv = document.getElementById("foreCastDiv");
 
-  // Reset all fields - Find better way?
+  // Reset all fields
   locationDiv.innerHTML = "";
-  gridDiv.innerHTML = "";
+  forCastDiv.innerHTML = "";
 
   // Create location
   locationTag.id = "location";
@@ -223,8 +226,11 @@ function displayForeCast(foreCastData, locationData) {
     detailedForecastTag.className = "detail-description";
     detailedForecastTag.innerText = parsedForecast.properties.periods[i].detailedForecast;
 
+    // Style forCastDiv
+    forCastDiv.className = "container";
+
     // Append info
-    gridDiv.appendChild(cardBody);
+    forCastDiv.appendChild(cardBody);
     cardBody.append(imgTag);
     cardBody.append(nameTag);
     cardBody.append(temperatureTag);

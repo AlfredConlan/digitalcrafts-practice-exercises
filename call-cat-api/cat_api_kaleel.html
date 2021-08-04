@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <style>
+            .data-grid {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+
+        </style>
+        <script>
+            loadCatData = function(url,callback){
+                let request = new XMLHttpRequest();
+                request.onreadystatechange = function(){
+                    if(request.readyState == 4 && request.status == 200){
+                        callback(request.responseText);
+                    }
+                }
+                request.open('GET',url);
+                request.send();
+            }
+
+            function displayCatData(apiResponse){
+                const jsonFormat = JSON.parse(apiResponse);
+                createGridDivs(jsonFormat);
+            }
+
+            function createGridDivs(jsonData){
+                let gridDiv = document.getElementById("gridDiv");
+                const totalBreeds = jsonData.length;
+                for(let i=0;i<totalBreeds;i++){
+                    const idDiv = document.createElement("div");
+                    idDiv.innerHTML = jsonData[i]['id'];
+                    gridDiv.appendChild(idDiv);  
+
+                    const nameDiv = document.createElement("div");
+                    nameDiv.innerHTML = jsonData[i]['name'];
+                    gridDiv.appendChild(nameDiv);  
+
+                    const descDiv = document.createElement("div");
+                    descDiv.innerHTML = jsonData[i]['description'];
+                    gridDiv.appendChild(descDiv);  
+
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="loadCatData('https://api.thecatapi.com/v1/breeds',displayCatData)">
+            Load the cat breeds
+        </button>
+
+        <div class="container">
+            <div id="gridDiv" class="data-grid">
+                <div>Id</div>
+                <div>Name</div>
+                <div>Description</div>
+            </div>
+        </div>
+    </body>
+</html>

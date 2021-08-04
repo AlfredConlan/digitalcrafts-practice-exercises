@@ -12,7 +12,7 @@ body {
 }
 
 .card {
-  width: 100%;
+  /* width: 100%; */
   margin: 2rem;
 }
 
@@ -23,12 +23,14 @@ body {
 
 #foreCastDiv {
   margin: 0 auto;
-  width: 45rem; /*  You can change width if you want the card to be larger or smaller  */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #currentDiv {
   margin: 0 auto;
-  width: 45rem;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 img {
@@ -62,24 +64,25 @@ img {
 
 /*--------------   media queries below for different screen sizes below   ---------*/
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   #foreCastDiv {
-    width: 35rem; /*  You can change width if you want the card to be larger or smaller  */
+    width: 35rem; 
   }
   #currentDiv {
-    width: 35rem; /*  You can change width if you want the card to be larger or smaller  */
+    width: 35rem; 
   }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #foreCastDiv {
-    width: auto; /*  You can change width if you want the card to be larger or smaller  */
+    width: 100vw; 
     padding: 15px;
     margin: 0;
   }
+
   #currentDiv {
-    width: auto; /*  You can change width if you want the card to be larger or smaller  */
+    width: 100vw !important; 
     padding: 15px;
     margin: 0;
   }
-}
+} */

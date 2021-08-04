@@ -1,40 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Book Entry</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-</head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
 
-<body>
+  <body>
     <section class="login-dark">
-        <form method="post">
-            <h2 class="visually-hidden">Login Form</h2>
-            <div class="illustration"><i class="bi bi-book"></i></div>
-            <div class="mb-3"><input class="form-control" type="text" name="book_name" placeholder="Book Name" required
-                    maxlength="50"></div>
-            <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" required></div>
-            <div class="mb-3"><input class="form-control" type="text" name="isbn" required length="13"
-                    placeholder="ISBN" required></div>
-            <div>
-                <select class="form-control" name="rating" placeholder="Rating">
-                    <option value="all-ages" selected="selected">All Ages</option>
-                    <option value="6+">6+</option>
-                    <option value="13+">13+</option>
-                </select>
-            </div>
+      <form method="post">
+        <h2 class="visually-hidden">Login Form</h2>
+        <div class="illustration"><i class="bi bi-book"></i></div>
 
+        <div class="mb-3">
+          Book Name
+          <input
+            class="form-control"
+            type="text"
+            name="book_name"
+            placeholder="ex: The Lord Of The Rings"
+            required
+            maxlength="50"
+          />
+        </div>
 
-            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Submit</button></div>
-        </form>
+        <div class="mb-3">
+          Author Name
+          <input
+            class="form-control"
+            type="text"
+            name="author-name"
+            placeholder="ex: JRR Tolkein"
+            required
+            maxlength="50"
+          />
+        </div>
+
+        <div class="mb-3">
+          Year Published
+          <input
+            id="year-published"
+            class="form-control"
+            type="date"
+            name="year-published"
+            placeholder="Year Published"
+            max="2021-07-30"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          ISBN (13 characters)
+          <input
+            class="form-control"
+            type="text"
+            name="isbn"
+            pattern=".{13}"
+            placeholder="ex: 9788845292613"
+            required
+          />
+        </div>
+
+        <div>
+          Rating
+          <select class="form-control" name="rating" placeholder="Rating">
+            <option value="all-ages" selected="selected">All Ages</option>
+            <option value="6+">6+</option>
+            <option value="13+">13+</option>
+          </select>
+        </div>
+
+        <br />
+
+        <p><label>Media Type</label></p>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input
+              type="radio"
+              name="options"
+              id="option1"
+              autocomplete="off"
+              checked
+            />
+            Kindle
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="options"
+              id="option2"
+              autocomplete="off"
+            />
+            Hardcover
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="options"
+              id="option3"
+              autocomplete="off"
+            />
+            CD
+          </label>
+        </div>
+
+        <br />
+        <br />
+
+        <div class="mb-3">
+          Price (dollar sign followed by 2 decimal number)
+          <input
+            class="form-control"
+            type="text"
+            name="price"
+            placeholder="ex: $12.99"
+            pattern="^\$[0-9]+(\.[0-9][0-9])?$"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <button
+            class="btn btn-primary d-block w-100"
+            onsubmit="showSuccess()"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
+    <script src="./main.js"></script>
+  </body>
 </html>
